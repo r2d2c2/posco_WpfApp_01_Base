@@ -7,7 +7,42 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btn" Content="Button" HorizontalAlignment="Left" Margin="370,189,0,0" VerticalAlignment="Top"/>
-        <!-- 주석-->
+        <!-- Tab Control-->
+        <TabControl>
+            <TabItem Header="학생 정보">
+                <StackPanel Margin="10">
+                    <TextBlock Text="이름 : 홍길동"></TextBlock>
+                    <TextBlock Text="나이 : 27"/>
+                    <!--한줄로도 가능 마치 html처럼-->
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Grid">
+                <Grid>
+                    <!--행과열 정보를 선언-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--0행 0열에 생성-->
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="이름 : " Margin="5"/>
+                    <!--Grid.Row 해당 요소가 위차할 행번호-->
+                    <!--Grid.column : 행당 위치가 열 번호-->
+
+                    <!--0행 1열에 생성-->
+                    <TextBox Grid.Row="0" Grid.Column="1" Margin="5"/>
+                    <!--1행 0열 부터 1열 까지-->
+                    <Button Grid.Row="1" Grid.ColumnSpan="2"/>
+                    <!--Grid.Row : 행번호
+                    Grid.ColumnSpan : 여러 열을 합칠때--> 
+                    
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
