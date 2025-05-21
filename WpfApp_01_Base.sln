@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseIt2", "ExpenseIt2\Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp_Grid_runing", "WpfApp_Grid_runing\WpfApp_Grid_runing.csproj", "{0FCE336B-21EE-4529-8657-9931943AAC46}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp_Slider_Runing", "WpfApp_Slider_Runing\WpfApp_Slider_Runing.csproj", "{102D2263-5249-4824-8947-B7898F16BB7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0FCE336B-21EE-4529-8657-9931943AAC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FCE336B-21EE-4529-8657-9931943AAC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FCE336B-21EE-4529-8657-9931943AAC46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{102D2263-5249-4824-8947-B7898F16BB7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{102D2263-5249-4824-8947-B7898F16BB7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{102D2263-5249-4824-8947-B7898F16BB7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{102D2263-5249-4824-8947-B7898F16BB7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

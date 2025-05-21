@@ -1,8 +1,8 @@
-﻿<Application x:Class="WpfApp_Grid_runing.App"
+﻿<Application x:Class="WpfApp_Slider_Runing.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:WpfApp_Grid_runing"
-             StartupUri="Window1.xaml">
+             xmlns:local="clr-namespace:WpfApp_Slider_Runing"
+             StartupUri="MainWindow.xaml">
     <Application.Resources>
          
     </Application.Resources>
