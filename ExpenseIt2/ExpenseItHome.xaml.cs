@@ -23,11 +23,13 @@ namespace ExpenseIt2
         {
             InitializeComponent();
         }
-        private void ViewReport_Click(object sender, RoutedEventArgs e)
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             // View Expense Report
-            ExpenseReportPage expenseReportPage = new ExpenseReportPage();
+            ExpenseReportPage expenseReportPage = new ExpenseReportPage(this.peopleListBox.SelectedItem);
             this.NavigationService.Navigate(expenseReportPage);
         }
+
     }
 }

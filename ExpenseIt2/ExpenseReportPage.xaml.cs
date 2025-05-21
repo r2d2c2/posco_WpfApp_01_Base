@@ -23,12 +23,16 @@ namespace ExpenseIt2
         {
             InitializeComponent();
         }
-
         // Custom constructor to pass expense report data
         public ExpenseReportPage(object data) : this()
         {
             // Bind to expense report data.
             this.DataContext = data;
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

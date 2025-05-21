@@ -9,8 +9,6 @@
 
     <Grid Margin="10,0,10,10">
 
-        
-        
         <Grid.Resources>
             <!-- Expense Report Data -->
             <XmlDataProvider x:Key="ExpenseDataSource" XPath="Expenses">
@@ -37,7 +35,14 @@
                     </Expenses>
                 </x:XData>
             </XmlDataProvider>
+
+
+            <!-- Name item template -->
+            <DataTemplate x:Key="nameItemTemplate">
+                <Label Content="{Binding XPath=@Name}"/>
+            </DataTemplate>
         </Grid.Resources>
+
 
         <Grid.Background>
             <ImageBrush ImageSource="watermark.png"  />
@@ -57,19 +62,20 @@
 
         <!-- People list -->
 
-        <Border Grid.Column="1" Grid.Row="1" Height="35" Padding="5" Background="#4E87D4">
-            <Label VerticalAlignment="Center" Foreground="White">Names</Label>
+        <Label Grid.Column="1" Style="{StaticResource headerTextStyle}" >
+            View Expense Report
+        </Label>
+
+        <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource listHeaderStyle}">
+            <Label Style="{StaticResource listHeaderTextStyle}">Names</Label>
         </Border>
-        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2">
-            <ListBoxItem>Mike</ListBoxItem>
-            <ListBoxItem>Lisa</ListBoxItem>
-            <ListBoxItem>John</ListBoxItem>
-            <ListBoxItem>Mary</ListBoxItem>
+        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2" 
+         ItemsSource="{Binding Source={StaticResource ExpenseDataSource}, XPath=Person}"
+         ItemTemplate="{StaticResource nameItemTemplate}">
         </ListBox>
 
         <!-- View report button -->
-        <Button Grid.Column="1" Grid.Row="3" Margin="0,10,0,0" Width="125"
-Height="25" HorizontalAlignment="Right">View</Button>
+        <Button Grid.Column="1" Grid.Row="3" Click="Button_Click" Style="{StaticResource buttonStyle}">View</Button>
     </Grid>
     
 </Page>
