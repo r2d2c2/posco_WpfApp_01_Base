@@ -35,8 +35,8 @@ namespace WpfApp_Imgae_Runing
                 // 이미지 파일을 BitmapImage로 변환
                 BitmapImage bitmapImage = new BitmapImage(new Uri(imagePath, UriKind.Absolute));
                 // Image 컨트롤에 이미지 설정
-                //myButton.Width=bitmapImage.Width;
-                //myButton.Height=bitmapImage.Height;
+                myButton.Width=bitmapImage.Width;
+                myButton.Height=bitmapImage.Height;
                 //버튼에 이미지 설정
                 myButton.Content=new Image { Source = bitmapImage, Width = bitmapImage.Width, Height = bitmapImage.Height };
             }

@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <StackPanel>
-            <Button x:Name="myButton" Content="이미지 변경" Margin="20" Click="Button_Click"/>
+            <Button x:Name="myButton" Content="이미지 변경" Margin="20" Click="Button_Click" Width="200" Height="100" />
         </StackPanel>
     </Grid>
 </Window>
