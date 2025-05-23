@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp_Grid_runing", "WpfAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp_Slider_Runing", "WpfApp_Slider_Runing\WpfApp_Slider_Runing.csproj", "{102D2263-5249-4824-8947-B7898F16BB7C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp_02_Advanced", "WpfApp_02_Advanced\WpfApp_02_Advanced.csproj", "{B205739C-AD95-4185-97E5-91712DB0863D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp_Imgae_Runing", "WpfApp_Imgae_Runing\WpfApp_Imgae_Runing.csproj", "{50266F26-6067-481A-A967-FE6F13B55407}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{102D2263-5249-4824-8947-B7898F16BB7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{102D2263-5249-4824-8947-B7898F16BB7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{102D2263-5249-4824-8947-B7898F16BB7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B205739C-AD95-4185-97E5-91712DB0863D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B205739C-AD95-4185-97E5-91712DB0863D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B205739C-AD95-4185-97E5-91712DB0863D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B205739C-AD95-4185-97E5-91712DB0863D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50266F26-6067-481A-A967-FE6F13B55407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50266F26-6067-481A-A967-FE6F13B55407}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50266F26-6067-481A-A967-FE6F13B55407}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50266F26-6067-481A-A967-FE6F13B55407}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

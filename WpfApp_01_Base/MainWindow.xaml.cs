@@ -19,6 +19,16 @@ namespace WpfApp_01_Base
         public MainWindow()
         {
             InitializeComponent();
+
+            //데이터 바인딩
+            //데이터 리스트 생성
+            List<Animale> animals = new List<Animale>()
+            {
+                new Animale() { Name="하마",Percent= 10 },
+                new Animale() { Name="타조",Percent= 90 },
+                new Animale() { Name="토끼",Percent= 50 }
+            };
+            listBox.ItemsSource=animals;
         }
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -89,6 +99,66 @@ namespace WpfApp_01_Base
             else
             {
                 textStatus.Text = $"현재 상태 null";
+            }
+        }
+
+        private void comboFruits_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //사용자가 선택한 항목을 가지고 오기
+            ComboBoxItem selectedItem = (ComboBoxItem)comboFruits.SelectedItem;//형변환 실패시 null 반환
+            
+            if(selectedItem != null)
+            {
+                string selectedText=selectedItem.Content.ToString();
+                textResult2.Text = $"선택한 과일: {selectedText}";
+            }
+        }
+
+        private void listColors_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListBoxItem selected = (ListBoxItem)listColors.SelectedItem;
+            if(selected != null)
+            {
+                string selectedText = selected.Content.ToString();
+                textSelected.Text= $"선택한 색상: {selectedText}";
+            }
+        }
+
+        private void listFruits_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            List<string> selectedFruits = new List<string>();
+            foreach(ListBoxItem i in listFruits.SelectedItems)
+            {
+                selectedFruits.Add(i.Content.ToString());
+            }
+            textSelected.Text = $"선택한 과일: {string.Join(", ", selectedFruits)}";
+        }
+
+        // 바인딩용
+        public class Animale
+        {
+            public string Name { get; set; }
+            public int Percent { get; set; }
+        }
+
+        private void btnNamver_Click(object sender, RoutedEventArgs e)
+        {
+            WebBrowser1.Navigate("https://naver.com");
+        }
+
+        private void btnBakc_Click(object sender, RoutedEventArgs e)
+        {
+            if(WebBrowser1.CanGoBack)
+            {
+                WebBrowser1.GoBack();
+            }
+        }
+
+        private void btnForward_Click(object sender, RoutedEventArgs e)
+        {
+            if(WebBrowser1.CanGoForward)
+            {
+                WebBrowser1.GoForward();
             }
         }
     }

@@ -90,6 +90,64 @@
                     <TextBlock Name="textStatus"  FontSize="26" Margin="20"/>
                 </StackPanel>
             </TabItem>
+
+            <TabItem Header="콤보박스">
+                <StackPanel Margin="20">
+                    <TextBlock Text="과일을 선택하세요" FontSize="26" Margin="0,0,0,5"/>
+                    <ComboBox Name="comboFruits" Width="200" Height="100" SelectionChanged="comboFruits_SelectionChanged" >
+                        <ComboBoxItem Content="사과"/>
+                        <ComboBoxItem Content="바나나"/>
+                        <ComboBoxItem Content="오렌지"/>
+                    </ComboBox>
+                    <TextBlock Name="textResult2" FontSize="26" Margin="10"/>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="리스트 박스">
+                <StackPanel Margin="20">
+                    <TextBlock Text="좋아하는 색을 선택하세요" FontSize="26" Margin="0,0,0,5"/>
+                    <ListBox x:Name="listColors" Height="100" Width="200" SelectionChanged="listColors_SelectionChanged">
+                        <ListBoxItem Content="빨강"/>
+                        <ListBoxItem Content="초록"/>
+                        <ListBoxItem Content="파랑"/>
+                    </ListBox>
+                    <TextBlock Name="textSelected" FontSize="26" Margin="10"/>
+                    <ListBox x:Name="listFruits" SelectionMode="Multiple" SelectionChanged="listFruits_SelectionChanged">
+                        <ListBoxItem Content="사과"/> 
+                        <ListBoxItem Content="바나나"/> 
+                        <ListBoxItem Content="오렌지"/> 
+                        <ListBoxItem Content="포도"/> 
+                        <!--<ListBoxItem Content="사과"/>--> 
+                    </ListBox>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="데이터 바인딩">
+                <ListBox x:Name="listBox">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="0,2">
+                                <!--margin 좌우 상하-->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBox Text="{Binding Name}"/>
+                                <ProgressBar Value="{Binding Percent}" Grid.Column="1" Minimum="0" Maximum="100" Height="100" Margin="5,0,0,0"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </TabItem>
+
+            <TabItem Header="web">
+                <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+                    <WebBrowser x:Name="WebBrowser1"/>
+                    <Button x:Name="btnNamver" Content="네이버로 이동" Width="100" Margin="0,0,10,0" Click="btnNamver_Click"/>
+                    <Button x:Name="btnBakc" Content="뒤로 가기" Width="100" Margin="0,0,10,0" Click="btnBakc_Click"/>
+                    <Button x:Name="btnForward" Content="앞으로 가기" Width="100" Margin="0,0,10,0" Click="btnForward_Click"/>
+                </StackPanel>
+            </TabItem>
             
         </TabControl>
     </Grid>
